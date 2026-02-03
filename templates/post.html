@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World - Teo Bucci</title>
+    <title>{{ title }} - Teo Bucci</title>
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="stylesheet" href="../style.css">
     <style>
@@ -32,16 +32,12 @@
         <a href="./" class="back-link">← All posts</a>
         
         <header class="post-header">
-            <h1 class="post-title">Hello World</h1>
-            <time class="post-date">February 03, 2026</time>
+            <h1 class="post-title">{{ title }}</h1>
+            <time class="post-date">{{ formatted_date }}</time>
         </header>
         
         <article class="post-content">
-            <p>Welcome to my blog! This is my first post to test out the setup.</p>
-<p>I built this minimal website to have a simple online presence where I can share my thoughts and projects. The entire site is built with vanilla HTML and CSS—no frameworks, no build steps, just fast-loading pages.</p>
-<h2>Why minimal?</h2>
-<p>I wanted something that loads instantly, works everywhere, and is easy to maintain. Sometimes the simplest solution is the best one.</p>
-<p>More posts coming soon!</p>
+            {{ content | safe }}
         </article>
     </main>
 </body>

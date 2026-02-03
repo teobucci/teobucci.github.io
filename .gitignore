@@ -21,6 +21,5 @@ __pycache__/
 *.tmp
 *.bak
 
-# Generated files (built by GitHub Actions)
-# Uncomment the line below if you want to ignore generated HTML locally
-# blog/*.html
+# Generated files (built locally with build.py)
+# Run `python3 build.py` before committing to generate HTML from markdown

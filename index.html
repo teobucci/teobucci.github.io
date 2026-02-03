@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Teo Bucci - Personal Website">
     <title>Teo Bucci</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,12 +16,13 @@
         </header>
 
         <section class="about">
-            <p>Welcome to my personal website. I'm an applied scientist working at the intersection of research and software engineering, building solutions that bridge theory and practice.</p>
+            <p>👋 Welcome to my personal website.</p>
+            <p>I'm an applied scientist working at the intersection of research and software engineering, building solutions that bridge theory and practice.</p>
         </section>
 
         <section class="cta">
-            <a href="resume.pdf" download class="cta-button">Download Resume</a>
-            <a href="blog/" class="cta-button secondary">Read Blog</a>
+            <a href="assets/resume.pdf" target="_blank" rel="noopener" class="cta-button">📄 Resume</a>
+            <a href="blog/" class="cta-button secondary">✍️ Blog</a>
         </section>
 
         <section class="social">
@@ -37,10 +39,12 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Teo Bucci</p>
+        <p>&copy; <span id="year"></span> Teo Bucci</p>
     </footer>
 
     <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
         document.querySelector('.social-link[aria-label="Email"]').addEventListener('click', function(e) {
             e.preventDefault();
             alert('📧 Email address available in my resume!');

@@ -26,14 +26,18 @@
         <h1 style="margin-bottom: 3rem;">Blog</h1>
         
         <div class="posts">
-            
-                
+            {% if posts %}
+                {% for post in posts %}
             <article class="post">
-                <h2 class="post-title"><a href="hello-world.html">Hello World</a></h2>
-                <time class="post-date">February 03, 2026</time>
+                <h2 class="post-title"><a href="{{ post.slug }}.html">{{ post.title }}</a></h2>
+                <time class="post-date">{{ post.formatted_date }}</time>
             </article>
-                
-            
+                {% endfor %}
+            {% else %}
+            <article class="post">
+                <p style="color: #999; font-style: italic;">No posts yet. Check back soon!</p>
+            </article>
+            {% endif %}
         </div>
     </main>
 </body>
