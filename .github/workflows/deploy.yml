@@ -28,7 +28,11 @@ jobs:
         with:
           python-version: '3.x'
       - name: Build blog posts
-        run: python3 build.py
+        run: |
+          mkdir -p blog
+          python3 build.py
+          echo "Generated files:"
+          ls -la blog/
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
