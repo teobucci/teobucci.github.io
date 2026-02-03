@@ -22,4 +22,5 @@ __pycache__/
 *.bak
 
 # Generated files (built by GitHub Actions)
-blog/*.html
+# Uncomment the line below if you want to ignore generated HTML locally
+# blog/*.html

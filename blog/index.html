@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Teo Bucci</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body { justify-content: flex-start; padding-top: 4rem; }
+        main { max-width: 650px; text-align: left; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: #666; text-decoration: none; }
+        .back-link:hover { color: #1a1a1a; }
+        .posts { display: flex; flex-direction: column; gap: 2rem; }
+        .post { padding-bottom: 2rem; border-bottom: 1px solid #e5e5e5; }
+        .post:last-child { border-bottom: none; }
+        .post-title { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .post-date { color: #999; font-size: 0.9rem; }
+        .post a { color: #1a1a1a; text-decoration: none; }
+        .post a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <main>
+        <a href="../" class="back-link">← Back</a>
+        <h1 style="margin-bottom: 3rem;">Blog</h1>
+        
+        <div class="posts">
+            <article class="post">
+                <h2 class="post-title"><a href="hello-world.html">Hello World</a></h2>
+                <time class="post-date">February 03, 2026</time>
+            </article>
+        </div>
+    </main>
+</body>
+</html>
